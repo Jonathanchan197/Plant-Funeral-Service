@@ -262,11 +262,8 @@
         font-size: 24px;
         width: 310px;
     }
-
+    
     .testimonial {
-        font-size: small;
-        margin: 3em 1em;
-    }    .testimonial {
         font-size: small;
         margin: 3em 3em;
     }
