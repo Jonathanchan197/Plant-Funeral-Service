@@ -34,9 +34,8 @@
         ></b-form-input>
       </b-form-group>
       <div class="spam">
-        <b-form-checkbox v-model="form.spam" name="check-button">
-          I agree to receive e-mails from your company and your terms and
-          conditions.
+        <b-form-checkbox v-model="form.spam" name="check-button" style="display: flex;">
+          <p>I agree to receive e-mails from your company and your terms and conditions.</p>
         </b-form-checkbox>
       </div>
       <div id="plantsquestion">
@@ -51,6 +50,7 @@
           outdoor.
         </b-form-checkbox>
       </div>
+
       <div class="button">
         <b-button type="submit" variant="primary">Sign Up</b-button>
       </div>
@@ -132,15 +132,16 @@ div#input-group-3 {
 }
 
 .spam {
-  margin-right: 10px;
-  margin-top: 1em;
+  font-size: smaller;
+  margin-top: -1.5em;
+}
+
+.spam p {
+  margin-left: 10px;
 }
 
 #plantsquestion {
   text-align: center;
-  margin-top: 1em;
-  margin-bottom: 1em;
-
 }
 
 div#plantsquestion h4 {
@@ -150,7 +151,7 @@ div#plantsquestion h4 {
 }
 .plants {
   display: flex;
-  margin-top: 0;
+  margin-top: -2em;
 }
 
 div.plants input {
@@ -168,5 +169,13 @@ button {
 
 .btn-primary {
   background-color: #71b2ff !important;
+}
+
+b-form-checkbox .subscribe {
+  display: flex;
+}
+
+.custom-control-label {
+  margin-top: 35px;
 }
 </style>
