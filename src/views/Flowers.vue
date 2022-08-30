@@ -3,7 +3,7 @@
         <b-card title="Card Title" no-body>
             <b-card-header header-tag="nav">
             <b-nav card-header pills>
-                <b-nav-text>Plant Funeral Service</b-nav-text>
+                <b-nav-text>Plant life after death</b-nav-text>
             </b-nav>
             </b-card-header>
             <b-card bg-variant="light" text-variant="black" class="text-center" style="height: 680px">
@@ -20,7 +20,7 @@
 
             <b-card bg-variant="light" text-variant="black" class="text-center" style="height: 680px">
                 <div class="care">
-                <b-card-text class="did">Did you grow a plant for years so that a neighbor would be jealous and it died?</b-card-text>
+                <b-card-text class="did">Did you grow a plant for years so that a neighbor would be jealous... and it died?</b-card-text>
                 <b-card-text>Don’t worry we will take care of you. </b-card-text>
                 </div>
                 <div class="story">
@@ -35,10 +35,11 @@
 
             <b-card bg-variant="light" text-variant="black" class="text-center"  style="height: 250px">
                 <h2>Service Option</h2>
-                <div class="option"><ul><h2>We thank the following families for allowing us to be part of their story.</h2>
+                <div class="option"><ul>
                     <li>Burial</li>
                     <li>Cremation</li>
-                </ul></div>
+                </ul>
+                </div>
                 <ul class="links">
                     <li>Standard Funeral.</li>
                     <li>Fancy Funeral.</li>
@@ -74,16 +75,22 @@
         font-family: 'Montserrat', sans-serif;
     }
         
-    nav.card-header {
+    nav .card-header {
         height: 80px;
         font-size: 200%;
     }
         
     .heading {
+        width: 291px;
+        height: 177px;
+        color: #71B2FF;
         margin-top: 1em;
-        font-size: 48px;
+        font-size: 38px;
         font-weight: bold;
         text-align: left;
+        position: fixed;
+        top: 320px;
+        left: 30px;
     }
 
     .service {
