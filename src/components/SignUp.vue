@@ -4,13 +4,11 @@
       <h1>Sign up for our newsletter.</h1>
       <p>
         Get weekly plants care guide to prevent mental problems after losing
-        your green friends. 
+        your green friends.
       </p>
-      <p>
-        No spam, we promise.
-      </p>
+      <p>No spam, we promise.</p>
     </div>
-    <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+    <b-form @submit="onSubmit" v-if="show">
       <b-form-group id="input-group-1" label="First name" label-for="input-1">
         <b-form-input
           id="input-1"
@@ -35,26 +33,24 @@
           required
         ></b-form-input>
       </b-form-group>
+      <div class="spam">
+        <b-form-checkbox v-model="form.spam" name="check-button" style="display: flex;">
+          <p>I agree to receive e-mails from your company and your terms and conditions.</p>
+        </b-form-checkbox>
+      </div>
+      <div id="plantsquestion">
+        <h4>What plants need reviving in your home?</h4>
+      </div>
 
-      <b-form-group id="input-group-4" v-slot="{ ariaDescribedby }">
-        <b-form-checkbox-group
-          v-model="form.checked"
-          id="checkboxes-4"
-          :aria-describedby="ariaDescribedby"
-        >
-          <div id="mail" >
-            <b-form-checkbox value="mail" style="display: flex;">
-              I agree to receive e-mails from your company and your terms and
-              conditions.
-            </b-form-checkbox>
-          </div>
-          <p id="plantsquestion">What plants need reviving in your home?</p>
-          <div class="plants">
-            <b-form-checkbox value="indoor">Indoor</b-form-checkbox>
-            <b-form-checkbox value="outdoor">Outdoor</b-form-checkbox>
-          </div>
-        </b-form-checkbox-group>
-      </b-form-group>
+      <div class="plants">
+        <b-form-checkbox v-model="form.indoor" name="check-button">
+          indoor.
+        </b-form-checkbox>
+        <b-form-checkbox v-model="form.outdoor" name="check-button">
+          outdoor.
+        </b-form-checkbox>
+      </div>
+
       <div class="button">
         <b-button type="submit" variant="primary">Sign Up</b-button>
       </div>
@@ -63,6 +59,8 @@
 </template>
 
 <script>
+import { db } from "../firestoreInit";
+
 export default {
   data() {
     return {
@@ -70,35 +68,27 @@ export default {
         firstName: "",
         lastName: "",
         email: "",
-        checked: [],
+        spam: false,
+        indoor: false,
+        outdoor: false,
       },
       show: true,
     };
   },
   methods: {
-    onSubmit(event) {
+    async onSubmit(event) {
       event.preventDefault();
-      alert(JSON.stringify(this.form));
-    },
-    onReset(event) {
-      event.preventDefault();
-      // Reset our form values
-      this.form.firstName = "";
-      this.form.lastName = "";
-      this.form.email = "";
-      this.form.checked = [];
-      // Trick to reset/clear native browser form validation state
-      this.show = false;
-      this.$nextTick(() => {
-        this.show = true;
-      });
+      const name = this.form.firstName;
+      const data = this.form;
+      await db.collection("users").add({ data });
+      console.log(JSON.stringify(this.form));
+      this.$router.push({ name: "thankyou", params: { name } });
     },
   },
 };
 </script>
 
 <style>
-
 div.content {
   margin-top: -2em;
   text-align: center;
@@ -106,20 +96,23 @@ div.content {
 
 div.content h1 {
   font-weight: 900;
-  color: #71B2FF;
+  color: #71b2ff;
+  font-size: 160%;
+  margin-bottom: 1em;
 }
 
 div.content p {
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 1em;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 0.5em;
   margin-bottom: 1.5em;
+  width: 87%;
 }
 
 div.form {
   text-align: left;
-  padding: 1em;
-  
+  padding: 2em;
+  font-family: Montserrat;
 }
 
 div.form input {
@@ -128,7 +121,7 @@ div.form input {
 }
 
 div#input-group-1 {
-  margin-top: 1em;
+  margin-top: -5em;
 }
 div#input-group-2 {
   margin-top: 1em;
@@ -138,27 +131,32 @@ div#input-group-3 {
   margin-top: 1em;
 }
 
-div#checkboxes-4 input {
-  margin-right: 10px;
-  margin-top: 2em;
+.spam {
+  font-size: smaller;
+  margin-top: -1.5em;
 }
 
-#mail {
-  width: auto;
+.spam p {
+  margin-left: 10px;
 }
 
 #plantsquestion {
   text-align: center;
-  margin-top: 1em;
-  margin-bottom: -1em;
+}
+
+div#plantsquestion h4 {
+  font-family: Montserrat;
+  font-size: medium;
+  font-weight: 900;
 }
 .plants {
   display: flex;
-  margin-top: 0;
+  margin-top: -2em;
 }
 
 div.plants input {
   margin-left: 70px;
+  margin-right: 5px;
 }
 
 .button {
@@ -170,7 +168,7 @@ button {
 }
 
 .btn-primary {
-  background-color:#71B2FF !important;
+  background-color: #71b2ff !important;
 }
 
 b-form-checkbox .subscribe {
