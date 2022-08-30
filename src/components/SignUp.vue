@@ -56,7 +56,7 @@
         </b-form-checkbox-group>
       </b-form-group>
       <div class="button">
-        <b-button type="submit" variant="outline-dark">Sign Up</b-button>
+        <b-button type="submit" variant="primary">Sign Up</b-button>
       </div>
     </b-form>
   </div>
@@ -106,6 +106,7 @@ div.content {
 
 div.content h1 {
   font-weight: 900;
+  color: #71B2FF;
 }
 
 div.content p {
@@ -162,11 +163,13 @@ div.plants input {
 
 .button {
   margin-top: 2em;
-  margin-left: 5px;
 }
 
 button {
-  width: 375px;
-  text-align: center;
+  width: fill;
+}
+
+.btn-primary {
+  background-color:#71B2FF !important;
 }
 </style>
