@@ -67,12 +67,13 @@
                 <button>Sign up for our news letter</button>
             </section>
 
-            <b-card bg-variant="light" text-variant="black" class="text-center"  style="height: 250px">
-                <h2>Service Option</h2>
-                <div class="option"><ul>
-                    <li>Burial</li>
-                    <li>Cremation</li>
-                </ul>
+            <section class="ServiceOption">
+                <h2>Service Options</h2>
+                <div class="option">
+                    <ul>
+                        <li id="Burial" >Burial</li>
+                        <li>Cremation</li>
+                    </ul>
                 </div>
                 <ul class="links">
                     <li>Standard Funeral.</li>
@@ -80,18 +81,27 @@
                     <li>VIP Funeral.</li>
                     <li>Customised super fancy cool funeral.</li>
                 </ul>
-            </b-card>
+            </section>
 
-            <b-card bg-variant="light" text-variant="black" class="text-center"  style="height: 550px">
-                
-                <div class="testimonials">
-                    <h2>We thank the following families for allowing us to be part of their story.</h2>
-                    <div class="testimonial">
-                        <h6>Betty</h6>
-                        <p>I killed the plant that my friend asked me to look after. It traumatized me to the core when she found out we sobbed together for about 20 minutes. But after I remembered this wonderful service, the pain immediately went away and I realized that we have a wonderful opportunity to worthily say goodbye to our cactus Bob. Thank you...</p>
-                    </div>
+            <section class="bye">
+                <h2>Bye</h2>
+            </section>
+
+            <section class="testimonials">
+                <h2>We thank the following families for allowing us to be part of their story.</h2>
+                <div class="testimonial">
+                    <h6>Betty</h6>
+                    <p>I killed the plant that my friend asked me to look after. It traumatized me to the core when she found out we sobbed together for about 20 minutes. But after I remembered this wonderful service, the pain immediately went away and I realized that we have a wonderful opportunity to worthily say goodbye to our cactus Bob. Thank you...</p>
                 </div>
-            </b-card>
+            </section>
+
+            <section class="consequences">
+                <h2>Сonsequences of plant abuse.</h2>
+                <div>
+                    <h1>they got hooked on drugs.</h1>
+                </div>
+                <p>This is a sad effect of plant neglect... <br><span>Read more</span></p>
+            </section>
 
             </b-card-body>
         </b-card>
@@ -175,33 +185,78 @@
     .newsLetter button {
         width: 300px;
         height: 50px;
+        background-color: #ffffff;
+        font-weight: bold;
+    }
+    
+    .ServiceOption {
+        height: 250px;
+        padding: 40px 0;
+        text-align: left;
+    }
+
+    .ServiceOption h2 {
+        font-weight: bold;
+        color:#449AFF;
+        margin: 20px 0;
     }
 
     .option ul {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         list-style-type: none;
+        border:solid 1px #DBEBFF;
+        max-width: 350px;
     }
 
-    .option a {
-        color: black;
-        list-style-type: none;
+    .option li {
+        text-align: center;
+        width: 175px;
+        height: 30px;
+        padding: 4px 0;
+    }
+
+    #Burial {
+        background-color: #DBEBFF;
+        margin-left: -32px;
     }
 
     .links {
         list-style-type: none;
-        text-align: left;
         font-size: 15px;
         font-weight: lighter;
+        margin-left: -30px;
+    }
+
+    .bye {
+        height: 211px;
+        background: url(./img/image-8.png) no-repeat;
+        background-size: cover;
+        margin: 30px 0;
+    }
+
+    .bye h2 {
+        font-weight: bold;
+        color: #71B2FF;
+        font-size: 36px;
+        position: relative;
+        top: 155px;
+        right: 140px;
     }
 
     .testimonials {
+        height: 375px;
+        background-color: #ECF5FF;
         margin: 4em 0 4em 0;
         text-align: left;
+        padding: inherit;
     }
 
     .testimonials h2 {
         font-weight: bold;
+        margin-right: 19px;
+        font-size: 24px;
+        width: 310px;
     }
 
     .testimonial {
@@ -214,6 +269,37 @@
 
     .testimonial h6 {
         font-weight: bold;
+    }
+
+    .consequences {
+        text-align: left;
+
+    }
+
+    .consequences h2 {
+        font-size: 24px;
+        width: 215px;
+        color: #449AFF;
+        font-weight: bold;
+    }
+
+    .consequences div {
+        background: url(./img/image-9.png) no-repeat;
+        background-size: cover;
+        background-size: contain;
+        height: 230px;
+    }
+
+    .consequences h1 {
+        color: white;
+        font-size: 61px;
+        font-weight: 300;
+        margin-left: 15px;
+    }
+
+    .consequences span {
+        color: #71B2FF;
+        text-decoration: underline;
     }
 
     </style>
