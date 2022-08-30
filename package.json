@@ -9,9 +9,12 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^1.35.6",
+    "@vuelidate/core": "^2.0.0-alpha.44",
+    "@vuelidate/validators": "^2.0.0-alpha.31",
     "bootstrap": "^5.2.0",
     "bootstrap-vue": "^2.22.0",
     "core-js": "^3.8.3",
+    "firebase": "^9.9.3",
     "sass": "^1.54.6",
     "sass-loader": "^13.0.2",
     "vue": "^2.7.10",
