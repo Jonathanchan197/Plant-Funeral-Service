@@ -50,7 +50,7 @@
 
             <b-card-body class="text-center">
 
-            <b-card-text class="service">personallised service every step of the way</b-card-text>
+            <p class="service">personallised service every step of the way</p>
 
             <section style="height: 680px">
                 <div class="care">
@@ -62,7 +62,7 @@
                     <p>Hello, is it me you're looking for?  I can see it in your eyes, I can see it in your smile, You're all I've ever wanted, and my arms are open wide, 'Cause you know just what to say, And you know just what to do, And I want to tell you so much, I love you.</p>
                 </div>
             </section >
-            <section class="newsLetter"  style="height: 161px">
+            <section class="newsLetter"  style="height: 200px">
                 <p>Get weekly plants care guide to prevent mental problems after loosing your green friends.</p>
                 <button>Sign up for our news letter</button>
             </section>
@@ -154,9 +154,7 @@
     .care {
         text-align: left;
         margin-right: 2.8em;
-
     }
-    
 
     .story {
         margin: 5em 0;
@@ -170,6 +168,8 @@
 
     .newsLetter {
         background-color: #ECF5FF;
+        padding: 20px 0;
+        height: 175px;
     }
 
     .newsLetter button {
