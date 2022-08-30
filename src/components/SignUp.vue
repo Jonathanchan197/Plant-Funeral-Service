@@ -42,8 +42,8 @@
           id="checkboxes-4"
           :aria-describedby="ariaDescribedby"
         >
-          <div id="mail">
-            <b-form-checkbox value="mail">
+          <div id="mail" >
+            <b-form-checkbox value="mail" style="display: flex;">
               I agree to receive e-mails from your company and your terms and
               conditions.
             </b-form-checkbox>
@@ -171,5 +171,13 @@ button {
 
 .btn-primary {
   background-color:#71B2FF !important;
+}
+
+b-form-checkbox .subscribe {
+  display: flex;
+}
+
+.custom-control-label {
+  margin-top: 35px;
 }
 </style>

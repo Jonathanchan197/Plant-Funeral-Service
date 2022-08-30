@@ -88,7 +88,7 @@
         font-size: 38px;
         font-weight: bold;
         text-align: left;
-        position: fixed;
+        position: relative;
         top: 320px;
         left: 30px;
     }
@@ -105,12 +105,19 @@
 
     .care {
         text-align: left;
+        margin-right: 1.8em;
+
     }
     
 
     .story {
         margin: 5em 0;
         text-align: left;
+    }
+
+    .story h2 {
+        color: #449AFF;
+        font-weight: bold;
     }
 
     .option ul {
