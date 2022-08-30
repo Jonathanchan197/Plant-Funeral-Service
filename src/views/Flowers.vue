@@ -64,7 +64,7 @@
             </section >
             <section class="newsLetter"  style="height: 161px">
                 <p>Get weekly plants care guide to prevent mental problems after loosing your green friends.</p>
-                <button>Sign up for our news letter</button>
+                <button @click.prevent="onClick">Sign up for our news letter</button>
             </section>
 
             <b-card bg-variant="light" text-variant="black" class="text-center"  style="height: 250px">
@@ -100,9 +100,13 @@
 
 <script>
     export default {
-        name: 'Flowers'
+        name: 'Flowers',
+        methods: {
+            onClick() {
+                this.$router.push({ name: "register"});
+            }
+        } 
     }
-
 </script>
 
 <style>

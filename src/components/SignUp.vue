@@ -1,5 +1,10 @@
 <template>
   <div class="form">
+    <div class="exit">
+      <b-button @click.prevent="onExit">
+        <b-icon icon="x-lg" aria-label="Help"></b-icon>
+      </b-button>
+    </div>
     <div class="content">
       <h1>Sign up for our newsletter.</h1>
       <p>
@@ -34,8 +39,15 @@
         ></b-form-input>
       </b-form-group>
       <div class="spam">
-        <b-form-checkbox v-model="form.spam" name="check-button" style="display: flex;">
-          <p>I agree to receive e-mails from your company and your terms and conditions.</p>
+        <b-form-checkbox
+          v-model="form.spam"
+          name="check-button"
+          style="display: flex"
+        >
+          <p>
+            I agree to receive e-mails from your company and your terms and
+            conditions.
+          </p>
         </b-form-checkbox>
       </div>
       <div id="plantsquestion">
@@ -84,29 +96,46 @@ export default {
       console.log(JSON.stringify(this.form));
       this.$router.push({ name: "thankyou", params: { name } });
     },
+    onExit() {
+      this.$router.push({ name: "flowers" });
+    },
   },
 };
 </script>
 
 <style>
+div.exit button {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 0;
+  border: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+div.exit g {
+  color: black;
+}
 div.content {
   margin-top: -2em;
   text-align: center;
 }
 
 div.content h1 {
+  margin-left: -90px;
   font-weight: 900;
   color: #71b2ff;
   font-size: 160%;
   margin-bottom: 1em;
+  width: 150%;
 }
 
 div.content p {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-right: 100px;
   margin-top: 0.5em;
   margin-bottom: 1.5em;
-  width: 87%;
+  width: 93%;
 }
 
 div.form {
@@ -121,7 +150,7 @@ div.form input {
 }
 
 div#input-group-1 {
-  margin-top: -5em;
+  margin-top: 1em;
 }
 div#input-group-2 {
   margin-top: 1em;
