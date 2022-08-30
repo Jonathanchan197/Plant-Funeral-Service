@@ -15,7 +15,9 @@
             </b-card>
 
             <b-card-body class="text-center">
+
                 <b-card-text class="service">personallised service every step of the way</b-card-text>
+
             <b-card bg-variant="light" text-variant="black" class="text-center" style="height: 680px">
                 <div class="care">
                 <b-card-text class="did">Did you grow a plant for years so that a neighbor would be jealous and it died?</b-card-text>
@@ -30,9 +32,10 @@
                 <button>Sign up for our news letter</button>
                 <p>Get weekly plants care guide to prevent mental problems after loosing your green friends.</p>
             </b-card>
+
             <b-card bg-variant="light" text-variant="black" class="text-center"  style="height: 250px">
                 <h2>Service Option</h2>
-                <div class="option"><ul>
+                <div class="option"><ul><h2>We thank the following families for allowing us to be part of their story.</h2>
                     <li>Burial</li>
                     <li>Cremation</li>
                 </ul></div>
@@ -42,6 +45,17 @@
                     <li>VIP Funeral.</li>
                     <li>Customised super fancy cool funeral.</li>
                 </ul>
+            </b-card>
+
+            <b-card bg-variant="light" text-variant="black" class="text-center"  style="height: 550px">
+                
+                <div class="testimonials">
+                    <h2>We thank the following families for allowing us to be part of their story.</h2>
+                    <div class="testimonial">
+                        <h6>Betty</h6>
+                        <p>I killed the plant that my friend asked me to look after. It traumatized me to the core when she found out we sobbed together for about 20 minutes. But after I remembered this wonderful service, the pain immediately went away and I realized that we have a wonderful opportunity to worthily say goodbye to our cactus Bob. Thank you...</p>
+                    </div>
+                </div>
             </b-card>
 
             </b-card-body>
@@ -108,6 +122,27 @@
         text-align: left;
         font-size: 15px;
         font-weight: lighter;
+    }
+
+    .testimonials {
+        margin: 4em 0 4em 0;
+        text-align: left;
+    }
+
+    .testimonials h2 {
+        font-weight: bold;
+    }
+
+    .testimonial {
+        font-size: small;
+        margin: 3em 1em;
+    }    .testimonial {
+        font-size: small;
+        margin: 3em 3em;
+    }
+
+    .testimonial h6 {
+        font-weight: bold;
     }
 
     </style>
