@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Flowers from '../views/Flowers.vue';
 import Register from '../views/Register.vue'
 import ThankYou from '../views/ThankYou.vue'
+import Analytics from '../views/Analytics.vue'
 
 Vue.use(Router);
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/thankyou',
       name: 'thankyou',
       component: ThankYou
+    },
+    {
+      path: '/analytics',
+      name: 'analytics',
+      component: Analytics
     }
   ]
 });
