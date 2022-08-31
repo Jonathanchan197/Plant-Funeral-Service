@@ -32,7 +32,7 @@ export default new Router({
       component: ThankYou
     },
     {
-      path: '/analytics',
+      path: '/flowers/analytics',
       name: 'analytics',
       component: Analytics
     }
