@@ -8,7 +8,7 @@
 
             <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav>
-                <b-nav-item href="https://astonishing-rugelach-0a8627.netlify.app/analytics">Analytics</b-nav-item>
+                <b-nav-item @click="onReport">Analytics</b-nav-item>
                 <b-nav-item href="#" disabled>Disabled</b-nav-item>
             </b-navbar-nav>
 
@@ -185,6 +185,9 @@
     methods: {
         onClick() {
         this.$router.push({ name: "register" });
+        },
+        onReport() {
+        this.$router.push({ name: "analytics" });
         },
         onSlideStart() {
         this.sliding = true;
