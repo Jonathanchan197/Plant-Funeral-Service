@@ -110,11 +110,11 @@
             </section>
 
             <section class="ServiceOption">
-            <h2>Service Options</h2>
+            <h2>Service Options.</h2>
             <div class="option">
                 <ul>
-                <li id="Burial">Burial</li>
-                <li>Cremation</li>
+                <li id="Burial"><a href="">Burial.</a></li>
+                <li><a href="">Cremation.</a></li>
                 </ul>
             </div>
             <ul class="links">
@@ -153,9 +153,8 @@
                 <h1>they got hooked on drugs.</h1>
             </div>
             <p>
-                This is a sad effect of plant neglect... <br /><span
-                >Read more</span
-                >
+                This is a sad effect of plant neglect... <br /><a href=""><span
+                >Read more</span></a>
             </p>
             </section>
         </b-card-body>
@@ -208,7 +207,7 @@
 
     a.navbar-brand{
         margin-left: 10px;
-        margin-top: 15px;
+        font-size: 27px;
     }
     .navbar-toggler {
     width: 60px;
@@ -241,7 +240,6 @@
 
     .service {
     margin: -10px 0 50px 0;
-    margin-top: 1em;
     }
 
     .did {
@@ -270,6 +268,8 @@
         height: 50px;
         background-color: #ffffff;
         font-weight: bold;
+        padding: 0;
+        border: none;
     }
     .newsLetter button:hover {
         background-color: #449AFF;
@@ -280,13 +280,6 @@
     background-color: #ecf5ff;
     padding: 20px 0;
     height: 175px;
-    }
-
-    .newsLetter button {
-    width: 300px;
-    height: 50px;
-    background-color: #ffffff;
-    font-weight: bold;
     }
 
     .ServiceOption {
@@ -314,6 +307,11 @@
     width: 175px;
     height: 30px;
     padding: 4px 0;
+    }
+
+    .option a {
+        color: black;
+        text-decoration: none;
     }
 
     #Burial {
@@ -397,4 +395,5 @@
     color: #71b2ff;
     text-decoration: underline;
     }
+
 </style>
