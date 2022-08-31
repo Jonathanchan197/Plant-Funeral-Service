@@ -52,7 +52,7 @@
 
             <p class="service">personallised service every step of the way</p>
 
-            <section style="height: 680px">
+            <section style="height: 599px">
                 <div class="care">
                 <b-card-text class="did">Did you grow a plant for years so that a neighbor would be jealous... and it died?</b-card-text>
                 <b-card-text>Don’t worry we will take care of you. </b-card-text>
@@ -191,6 +191,10 @@
         height: 50px;
         background-color: #ffffff;
         font-weight: bold;
+    }
+    .newsLetter button:hover {
+        background-color: #449AFF;
+        color: #ffffff;
     }
     
     .ServiceOption {
